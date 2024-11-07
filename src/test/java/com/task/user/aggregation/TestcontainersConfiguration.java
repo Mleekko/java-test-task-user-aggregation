@@ -33,7 +33,7 @@ class TestcontainersConfiguration {
     @Bean
     @ServiceConnection
     MSSQLServerContainer<?> sqlServerContainer() {
-        return new MSSQLServerContainer<>(DockerImageName.parse("mcr.microsoft.com/mssql/server:latest"));
+        return new MSSQLServerContainer<>(DockerImageName.parse("mcr.microsoft.com/mssql/server:latest")).acceptLicense();
     }
 
 }
