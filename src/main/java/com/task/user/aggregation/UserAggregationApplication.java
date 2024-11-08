@@ -8,10 +8,10 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 @SpringBootApplication
 @EnableConfigurationProperties
 @ConfigurationPropertiesScan("com.task.user.aggregation.config")
-public class JavaTestTaskUserAggregationApplication {
+public class UserAggregationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaTestTaskUserAggregationApplication.class, args);
+        SpringApplication.run(UserAggregationApplication.class, args);
     }
 
 }
