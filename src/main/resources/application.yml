@@ -9,21 +9,21 @@ task.docs.servers:
 data-sources:
   - name: data-base-1
     strategy: postgres #this property is optional, only if you implement multiple database type support (Postgres, ORACLE, MySQL...)
-    url: jdbc://.....
+    url: jdbc:postgresql://localhost:5432/test_task
     table: users
-    user: testuser
-    password: testpass
+    user: myuser
+    password: secret
     mapping:
       id: user_id
       username: login
       name: first_name
       surname: last_name
   - name: data-base-2
-    strategy: postgres
-    url: jdbc://.....
+    strategy: mysql
+    url: jdbc:mysql://localhost:3308/test_task?ssl-mode=REQUIRED
     table: user_table
-    user: testuser
-    password: testpass
+    user: myuser
+    password: secret
     mapping:
       id: ldap_login
       username: ldap_login

@@ -15,7 +15,10 @@ class TestcontainersConfiguration {
     @Bean
     @ServiceConnection
     MySQLContainer<?> mysqlContainer() {
-        return new MySQLContainer<>(DockerImageName.parse("mysql:latest"));
+        return new MySQLContainer<>(DockerImageName.parse("mysql:latest"))
+                .withDatabaseName("test_task_dev")
+                .withUsername("myuser")
+                .withPassword("secret");
     }
 
     @Bean
@@ -27,7 +30,10 @@ class TestcontainersConfiguration {
     @Bean
     @ServiceConnection
     PostgreSQLContainer<?> postgresContainer() {
-        return new PostgreSQLContainer<>(DockerImageName.parse("postgres:latest"));
+        return new PostgreSQLContainer<>(DockerImageName.parse("postgres:latest"))
+                .withDatabaseName("test_task_dev")
+                .withUsername("myuser")
+                .withPassword("secret");
     }
 
     @Bean

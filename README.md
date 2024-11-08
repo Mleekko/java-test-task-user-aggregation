@@ -1,8 +1,12 @@
 # java-test-task-user-aggregation
 
 
+
+
 #### Running with Docker Compose (via an IDE)
-Run `UserAggregationApplication`.
+1. Run `UserAggregationApplication`.
+2. Manually execute the queries in `test-data.sql`.
+3. visit the [API url](http://localhost:8080/users).
 
 #### Running with TestContainers
 Run `TestUserAggregationApplication`.
